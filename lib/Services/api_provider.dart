@@ -2,8 +2,8 @@ import 'package:http/http.dart' as http;
 import 'package:pokedex/Services/pokemon_model.dart';
 
 class ApiProvider {
-  Future<List<Users>> getUsers() async {
-    const uri = 'https://pokeapi.co/api/v2/pokemon';
+  Future<Users> getUsers() async {
+    const uri = 'https://pokeapi.co/api/v2/pokemon/';
 
     final request = await http.get(Uri.parse(uri));
 

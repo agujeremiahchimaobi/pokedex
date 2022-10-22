@@ -17,62 +17,63 @@ class _HomePageState extends State<HomePage> {
       length: 2,
       child: Scaffold(
         backgroundColor: const Color(0xffe8e8e8),
-        appBar: AppBar(
-          elevation: 0,
-          backgroundColor: Colors.white,
-          bottom: TabBar(
-            indicatorWeight: 3,
-            indicatorSize: TabBarIndicatorSize.tab,
-            indicatorColor: const Color(0xff3558cd),
-            tabs: [
-              Container(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-                child: Text(
-                  'All Pokemons',
-                  style: textStyle.copyWith(
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.black),
-                ),
-              ),
-              Container(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
-                child: Row(
-                  children: [
-                    Text(
-                      'Favourites',
-                      style: textStyle.copyWith(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.black),
+        appBar: PreferredSize(
+          preferredSize: const Size.fromHeight(90.0),
+          child: Container(
+            decoration: const BoxDecoration(
+              color: Colors.white,
+            ),
+            child: Column(
+              children: [
+                const AppBarContent(),
+                TabBar(
+                  indicatorWeight: 3,
+                  labelStyle: textStyle.copyWith(
+                    color: Colors.black,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
+                  ),
+                  unselectedLabelColor: Colors.grey,
+                  labelColor: Colors.black,
+                  indicatorSize: TabBarIndicatorSize.tab,
+                  indicatorColor: const Color(0xff3558cd),
+                  tabs: [
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 16,
+                        vertical: 5,
+                      ),
+                      child: const Text(
+                        'All Pokemons',
+                      ),
                     ),
-                    const SizedBox(width: 5),
-                    const CircleAvatar(
-                      backgroundColor: Color(0xff3558cd),
-                      radius: 10,
-                      child: Text('2'),
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 16,
+                        vertical: 5,
+                      ),
+                      child: Row(
+                        children: [
+                          const Text(
+                            'Favourites',
+                          ),
+                          const SizedBox(width: 5),
+                          CircleAvatar(
+                            backgroundColor: const Color(0xff3558cd),
+                            radius: 10,
+                            child: Text(
+                              '0',
+                              style: textStyle.copyWith(
+                                  fontSize: 12, color: Colors.white),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),
-              ),
-            ],
-          ),
-          automaticallyImplyLeading: false,
-          centerTitle: true,
-          title: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Image.asset('images/logo.png', height: 25),
-              const SizedBox(width: 8),
-              Text('Pokedex',
-                  style: textStyle.copyWith(
-                    fontSize: 25,
-                    color: Colors.black,
-                    fontWeight: FontWeight.w700,
-                  )),
-            ],
+              ],
+            ),
           ),
         ),
         body: const TabBarView(

@@ -126,3 +126,36 @@ class Pokemon extends StatelessWidget {
     );
   }
 }
+
+class AppBarContent extends StatelessWidget {
+  const AppBarContent({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        Padding(
+          padding: const EdgeInsets.only(top: 43),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Image.asset('images/logo.png', height: 25),
+              const SizedBox(width: 8),
+              Text(
+                'Pokedex',
+                style: textStyle.copyWith(
+                  fontSize: 25,
+                  color: Colors.black,
+                  fontWeight: FontWeight.w700,
+                ),
+              ),
+            ],
+          ),
+        ),
+        const SizedBox(height: 5),
+        const Divider(thickness: 2)
+      ],
+    );
+  }
+}
