@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../Constants/constants.dart';
+import '../Constants/pokemons.dart';
 
 class Favourites extends StatefulWidget {
   const Favourites({super.key});

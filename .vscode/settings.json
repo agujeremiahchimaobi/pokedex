@@ -1,0 +1,8 @@
+{
+  "files.autoSave": "onFocusChange",
+  "editor.cursorStyle": "block-outline",
+  "editor.multiCursorModifier": "alt",
+  "editor.defaultFormatter": "Dart-Code.flutter",
+  "editor.mouseWheelZoom": true,
+  "editor.multiCursorMergeOverlapping": false
+}

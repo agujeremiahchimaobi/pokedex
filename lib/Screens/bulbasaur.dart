@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:pokedex/Constants/constants.dart';
 
 class Bulbasaur extends StatefulWidget {
-  const Bulbasaur({super.key});
+  const Bulbasaur({
+    super.key,
+  });
 
   @override
   State<Bulbasaur> createState() => _BulbasaurState();

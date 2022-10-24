@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:http/http.dart' as http;
 import 'package:pokedex/Services/pokemon_model.dart';
 
@@ -18,3 +20,5 @@ class ApiProvider {
     }
   }
 }
+
+class Apicall {}

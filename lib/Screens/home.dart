@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pokedex/Constants/constants.dart';
 import 'package:pokedex/Screens/favourites.dart';
 import 'package:pokedex/Screens/pokemons.dart';
+import 'package:tab_indicator_styler/tab_indicator_styler.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -18,7 +19,7 @@ class _HomePageState extends State<HomePage> {
       child: Scaffold(
         backgroundColor: const Color(0xffe8e8e8),
         appBar: PreferredSize(
-          preferredSize: const Size.fromHeight(90.0),
+          preferredSize: const Size.fromHeight(100.0),
           child: Container(
             decoration: const BoxDecoration(
               color: Colors.white,
@@ -35,13 +36,17 @@ class _HomePageState extends State<HomePage> {
                   ),
                   unselectedLabelColor: Colors.grey,
                   labelColor: Colors.black,
+                  indicator: MaterialIndicator(
+                    color: const Color(0xff3558cd),
+                    paintingStyle: PaintingStyle.fill,
+                  ),
                   indicatorSize: TabBarIndicatorSize.tab,
                   indicatorColor: const Color(0xff3558cd),
                   tabs: [
                     Container(
                       padding: const EdgeInsets.symmetric(
                         horizontal: 16,
-                        vertical: 5,
+                        vertical: 10,
                       ),
                       child: const Text(
                         'All Pokemons',
@@ -50,7 +55,7 @@ class _HomePageState extends State<HomePage> {
                     Container(
                       padding: const EdgeInsets.symmetric(
                         horizontal: 16,
-                        vertical: 5,
+                        vertical: 10,
                       ),
                       child: Row(
                         children: [
